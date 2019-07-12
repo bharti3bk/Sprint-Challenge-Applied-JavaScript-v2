@@ -2,7 +2,7 @@
   width: 100%;
 }
 .border-bottom-grey {
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 }
 @font-face {
   font-family: 'PT Sans';
