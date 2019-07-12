@@ -9,8 +9,7 @@
 //    <div class="tab">topic here</div>
   
 
-const topic = document.querySelector('.topics');
-
+const topic = document.querySelector('.topics'); 
 const result = axios.get(`https://lambda-times-backend.herokuapp.com/topics`)
 result.then(res => {
     console.log(res); 
@@ -24,11 +23,17 @@ result.then(res => {
     console.log('Try Again Later');
 })
 
+
 function Tab (topics)
 {
     const tabComp = document.createElement('tab');
     tabComp.classList.add('tab');
     tabComp.textContent = topics;
 
-    return tabComp;
-}
+    tabComp.addEventListener('click' , event => {
+        tabComp.classList.toggle('.active-tab');
+    })
+    return tabComp;  
+}  
+
+
